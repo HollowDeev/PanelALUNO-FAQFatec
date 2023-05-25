@@ -7,16 +7,22 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="botao.js" defer></script>
 
     <title>Página Inicial</title>
 </head>
 <body>
     
         <header id="header-painel">
+
+            <div id="menuUsuario" onclick="openMenuUsuario()">
+                <i class="ph-bold ph-list"></i>
+            </div>
+
             <img src="/imagens/logo-fatec.png" alt="" width="150px">
             <h1>Painel de Perguntas</h1> 
-            <div class="campoUsuario">
-                <a href="logoff.html"><button class="botao-sair">Sair</button></a>
+            <div class="campoUsuarioAberto" id="campoUsuario">
+                <a href="logoff.html" ><button class="botao-sair">Sair</button></a>
                 <div id="notificacao">
                     <img src="imagens/bell-simple-fill.png" alt="" width="25px">
                 </div>
@@ -267,9 +273,16 @@
 
                             <div id="campo-adicionar-superior-pergunta2">
                                 <input type="text" id="nome-aluno">
-                                <label for="nome-aluno" id="nome-aluno-label">QUAL O SEU NOME? *</label>
+                                <label for="nome-aluno" id="nome-aluno-label">QUAL O SEU NOME?*</label>
                             </div>
 
+                        </div>
+
+                        <div id="campo-adicionar-superior-direita">
+                            <button class="pergunta-botao">
+                                <i class="ph-bold ph-pencil-simple-line"></i> 
+                                <p>PERGUNTAR</p>
+                            </button>
                         </div>
 
                     </div>
@@ -306,6 +319,11 @@
                             </select>
                         </div>
                     </div>
+
+                    <button class="pergunta-botao-inferior">
+                        <i class="ph-bold ph-pencil-simple-line"></i> 
+                        <p>PERGUNTAR</p>
+                    </button>
 
                 </div>
             </div>
